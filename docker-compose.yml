@@ -1,0 +1,13 @@
+version: '2'
+services:
+    wuxiacrawler:
+      container_name: wuxiacrawler
+      image: python:3.6.0
+      network_mode: host
+      working_dir: /opt/wuxiacrawler
+      volumes:
+        - ./:/opt/wuxiacrawler
+      environment:
+        - TERM=xterm
+        - LANG=en_US.UTF-8
+      command: tail -f /dev/null
